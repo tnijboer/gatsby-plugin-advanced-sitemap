@@ -247,8 +247,8 @@ exports.onPostBuild = async ({ graphql, pathPrefix }, pluginOptions) => {
     // Passing the config option addUncaughtPages will add all pages which are not covered by passed mappings
     // to the default `pages` sitemap. Otherwise they will be ignored.
     const options = pluginOptions.addUncaughtPages ? _.merge(defaultOptions, pluginOptions) : Object.assign(defaultOptions, pluginOptions)
-    const indexSitemapFile = path.join(PUBLICPATH, pathPrefix, INDEXFILE)
-    const resourcesSitemapFile = path.join(PUBLICPATH, pathPrefix, RESOURCESFILE)
+    const indexSitemapFile = path.join(PUBLICPATH, INDEXFILE)
+    const resourcesSitemapFile = path.join(PUBLICPATH, RESOURCESFILE)
 
     delete options.plugins
     delete options.createLinkInHead
